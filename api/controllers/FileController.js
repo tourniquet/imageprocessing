@@ -7,6 +7,7 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 var path = require('path')
+var sharp = require('sharp')
 
 module.exports = {
   upload (req, res) {
@@ -16,6 +17,8 @@ module.exports = {
       if (err) {
         console.log(err)
       }
+
+      console.log(files[0].fd)
 
       res.json({ file: files })
     })
