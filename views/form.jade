@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    title Image resize
+    link(rel="stylesheet", type="text/css", media="screen", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css")
+    
+  body
+    .container
+      form#form-new-ad.form.form-horizontal(action="/upload", method="POST", enctype="multipart/form-data")
+        .form-group
+          label.col-xs-12.col-sm-12.col-md-2.col-lg-2.control-label(for="form-first-image") imagine (1)
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+            input#form-first-image(name="form-first-image", accept="image/jpeg,image/png,image/gif", type="file", multiple)
+
+        .form-group
+          label.col-xs-12.col-sm-12.col-md-2.col-lg-2.control-label(for="form-second-image") imagine (2)
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+            input#form-second-image(name="form-second-image", accept="image/jpeg,image/png,image/gif", type="file")
+
+        .form-group
+          label.col-xs-12.col-sm-12.col-md-2.col-lg-2.control-label(for="form-third-image") imagine (3)
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+            input#form-third-image(name="form-third-image", accept="image/jpeg,image/png,image/gif", type="file")
+
+        .form-group
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12.text-center
+            input#post-ad-button.btn.btn-primary.waves-effect.waves-light.m-b-5(value="Postează", type="submit")
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
